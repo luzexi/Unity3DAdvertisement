@@ -192,9 +192,10 @@ void _connectInit() {
     WapsUserPoints *userPointsObj = notifyObj.object;
     NSString *pointsName = [userPointsObj getPointsName];
     int pointsValue = [userPointsObj getPointsValue];
-    NSString *pointsStr = [NSString stringWithFormat:@"您的%@: %d", pointsName, pointsValue];
+    //NSString *pointsStr = [NSString stringWithFormat:@"您的%@: %d", pointsName, pointsValue];
+    NSString *pointsStr = [NSString stringWithFormat:@"%d", pointsValue];
     const char * charStr =[pointsStr UTF8String];
-    UnitySendMessage("Main Camera", "updatePoints", charStr);
+    UnitySendMessage("WapsUnitySDK", "updatePoints", charStr);
 }
 //只有getPoints操作才会调用
 -(void)onGetPointsSuccess:(NSNotification*)notifyObj
@@ -202,9 +203,9 @@ void _connectInit() {
     WapsUserPoints *userPointsObj = notifyObj.object;
     NSString * pointsName=[userPointsObj getPointsName];
     int  pointsValue=[userPointsObj getPointsValue];
-	NSString *pointsStr = [NSString stringWithFormat:@"您的%@: %d",pointsName, pointsValue];
+	NSString *pointsStr = [NSString stringWithFormat:@"%d", pointsValue];
 	const char * charStr =[pointsStr UTF8String];
-    UnitySendMessage("Main Camera", "updatePoints", charStr);
+    UnitySendMessage("WapsUnitySDK", "updatePoints", charStr);
 }
 
 -(void)onAwardPointsSuccess:(NSNotification*)notifyObj

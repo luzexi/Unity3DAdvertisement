@@ -1,10 +1,41 @@
 ﻿using UnityEngine;
 using System.Runtime.InteropServices;
 
-public class WapsUnitySDK {
+
+//	WapsUnitySDK.cs
+//	Author: Lu zexi
+//	2014-07-17
+
+
+public class WapsUnitySDK : MonoBehaviour
+{
+	public int point
+	{
+		get;
+		set;
+	}
+
+	private static WapsUnitySDK s_cInstance;
+	public static WapsUnitySDK sInstance
+	{
+		get
+		{
+			if(s_cInstance==null)
+			{
+				GameObject obj = new GameObject("WapsUnitySDK");
+				s_cInstance = obj.AddComponent<WapsUnitySDK>();
+			}
+			return s_cInstance;
+		}
+	}
+
+	void updatePoints(string str){
+		this.point=int.Parse(str);
+	}
+
 	[DllImport("__Internal")]
     private static extern void _connectInit ();
-	public static void init()  
+	public void init()  
      {  
           
         if (Application.platform != RuntimePlatform.OSXEditor)   
@@ -18,7 +49,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]
     private static extern void _adShow ();  
        
-     public static void adShowAction()  
+     public void adShowAction()  
      {  
           
         if (Application.platform != RuntimePlatform.OSXEditor)   
@@ -31,7 +62,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]
     private static extern void _popShow ();  
        
-     public static void popShowAction()  
+     public void popShowAction()  
      {  
           
         if (Application.platform != RuntimePlatform.OSXEditor)   
@@ -44,7 +75,7 @@ public class WapsUnitySDK {
     [DllImport("__Internal")]  
     private static extern void _offerShow ();  
        
-     public static void offerShowAction ()
+     public void offerShowAction ()
      {  
         if (Application.platform != RuntimePlatform.OSXEditor)   
         {  
@@ -55,7 +86,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
     private static extern void _getPoints ();  
        
-     public static void getPointsAction ()
+     public void getPointsAction ()
      {  
         if (Application.platform != RuntimePlatform.OSXEditor)   
         {  
@@ -66,7 +97,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
     private static extern void _awardPoints ();  
        
-     public static void awardPointsAction ()
+     public void awardPointsAction ()
      {  
         if (Application.platform != RuntimePlatform.OSXEditor)   
         {  
@@ -77,7 +108,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
     private static extern void _spendPoints ();  
        
-     public static void spendPointsAction ()
+     public void spendPointsAction ()
      {  
         if (Application.platform != RuntimePlatform.OSXEditor)   
         {  
@@ -88,7 +119,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
 	private static extern void _bannerShow ();  
 	
-	public static void showBanner ()
+	public void showBanner ()
 	{  
 		if (Application.platform != RuntimePlatform.OSXEditor)   
 		{  
@@ -99,7 +130,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
 	private static extern void _bannerClose ();  
 	
-	public static void closeBanner ()
+	public void closeBanner ()
 	{  
 		if (Application.platform != RuntimePlatform.OSXEditor)   
 		{  
@@ -110,7 +141,7 @@ public class WapsUnitySDK {
 	[DllImport("__Internal")]  
 	private static extern void _showFeedBack ();  
 	
-	public static void showFeedBack ()
+	public void showFeedBack ()
 	{  
 		if (Application.platform != RuntimePlatform.OSXEditor)   
 		{  
