@@ -1,0 +1,5 @@
+
+
+@interface WapsSDK : UIViewController
+
+@end
