@@ -33,6 +33,11 @@ public class WapsUnitySDK : MonoBehaviour
 		this.point=int.Parse(str);
 	}
 
+	void OnDestroy()
+	{
+		s_cInstance = null;
+	}
+
 	[DllImport("__Internal")]
     private static extern void _connectInit ();
 	public void init()  

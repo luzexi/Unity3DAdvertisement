@@ -1,36 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Source/WapsUnitySDK.cs">
     <Files>
-      <File FileName="Assets/Scripts/Test/Main.cs" Line="18" Column="33" />
-      <File FileName="../../../../WapsOffer_ForUnity3D_1.1/WapsOffer_ForUnity3D/WapsUnity3DDemo/Assets/Main.cs" Line="28" Column="48" />
-      <File FileName="Assets/Scripts/Source/WapsUnitySDK.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Source/WapsUnitySDK.cs" Line="25" Column="50" />
+      <File FileName="Assets/Scripts/Test/Main.cs" Line="17" Column="72" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="Source" expanded="True">
-                <Node name="WapsUnitySDK.cs" selected="True" />
-              </Node>
-              <Node name="Test" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>bytes[0]</Value>
-          <Value>bytes[1]</Value>
-          <Value>m</Value>
-          <Value>n</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
